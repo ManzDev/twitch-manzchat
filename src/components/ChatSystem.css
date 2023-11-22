@@ -1,0 +1,17 @@
+.fake-container {
+  width: 400px;
+  height: var(--chat-height, 1200px);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}

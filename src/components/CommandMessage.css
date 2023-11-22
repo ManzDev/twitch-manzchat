@@ -1,0 +1,69 @@
+:host {
+  --font-name: jost;
+  --font-size: 1.4rem;
+
+  font-family: var(--font-name);
+  font-size: var(--font-size);
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container {
+  display: inline-grid;
+  grid-template-columns: max-content 1fr;
+
+  /* background:
+    linear-gradient(to right, transparent, #0008),
+    linear-gradient(to right, #000d, #000f, #000d 98%, var(--nick-color, #000) 98% 100%); */
+  background: #000b;
+  margin: 8px 0;
+  box-shadow: var(--shadow, 0 0 1px 1px #000);
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+  opacity: 100%;
+  transform: translateX(0);
+  position: relative;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+:host(.small) .container {
+  background: transparent;
+  box-shadow: none;
+  margin: 5px 0;
+  padding: 0;
+}
+
+:host(.small) .nick,
+:host(.small) .message {
+  background: #000c;
+  padding: 0 4px;
+  border-radius: 8px;
+}
+
+:host(.first) .container {
+  --shadow: 0 0 4px 2px gold;
+}
+
+:host(.off) .container {
+  opacity: 100%;
+  transform: translateX(400px);
+}
+
+.nick {
+  text-shadow: 1px 1px 0 #000;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.message {
+  font-weight: bold;
+  max-width: 180px;
+  color: gold;
+  text-shadow: 1px 1px 0 #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: Jost;
+  src:
+    url("fonts/jost-vf.woff2") format("woff2"),
+    url("fonts/jost-vf.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EnterCommand;
+  src:
+    url("fonts/entercommand.woff2") format("woff2"),
+    url("fonts/entercommand.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  background: #141414;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}

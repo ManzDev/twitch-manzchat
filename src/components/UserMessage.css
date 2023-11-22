@@ -1,0 +1,21 @@
+.message {
+  width: 300px;
+  color: #aad;
+  text-shadow: 1px 1px 0 #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5rem;
+}
+
+.message .user {
+  color: #d12e8d;
+}
+
+.message .emote {
+  margin: -0.3rem 0;
+  position: relative;
+}
+
+.message .url {
+  color: #2d7de1;
+}

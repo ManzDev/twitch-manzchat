@@ -1,0 +1,84 @@
+:host {
+  --avatar-size: 32px;
+  --sans-font: "Jost", sans-serif;
+  --sans-font-size: 1.2rem;
+  --sans-font-weight: 500;
+  --pixel-font: "EnterCommand", monospace;
+  --pixel-font-size: 1.8rem;
+
+  font-family: var(--sans-font);
+  font-size: var(--sans-font-size);
+  font-weight: var(--sans-font-weight);
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: calc(var(--avatar-size) * 1.5) 1fr;
+  background:
+    linear-gradient(to right, transparent, #0008),
+    linear-gradient(to right, #000d, #000f, #000d 98%, var(--nick-color, #000) 98% 100%);
+  margin: 8px 0;
+  padding: 10px 5px;
+  box-shadow: var(--shadow, 0 0 1px 1px #000);
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+  will-change: opacity, transform;
+  opacity: 100%;
+  transform: translateX(0);
+  position: relative;
+}
+
+:host(.first) .container {
+  --shadow: 0 0 4px 2px gold;
+}
+
+:host(.off) .container {
+  opacity: 100%;
+  transform: translateX(400px);
+}
+
+:host(.fadeout) .container {
+  opacity: 0%;
+}
+
+.user-info {
+  display: grid;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.user-info img {
+  --avatar-size: 52px;
+
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: translateX(-30px) rotate(-6deg);
+}
+
+.user-message {
+  padding: 5px 10px;
+  transform: translateX(-20px);
+}
+
+.nick {
+  font-family: var(--pixel-font);
+  font-size: var(--pixel-font-size);
+  text-shadow: 1px 1px 0 #000;
+  font-weight: bold;
+  color: #fff;
+}
+
+.reply {
+  margin: 0;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.reply span {
+  color: gold;
+}

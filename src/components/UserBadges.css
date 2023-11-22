@@ -1,0 +1,76 @@
+.badges {
+  position: absolute;
+  top: -21px;
+  right: 0;
+  width: 125px;
+  height: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.badges > div {
+  width: 28px;
+  height: 28px;
+  background-size: cover;
+  margin-left: 3px;
+}
+
+.badges .prime {
+  background-image: url("https://manz.dev/assets/badges/prime-36x36.png");
+}
+
+.badges .mod {
+  background-image: url("https://manz.dev/assets/badges/mods-30x30.png");
+}
+
+.badges .broadcaster {
+  background-image: url("https://manz.dev/assets/badges/streamer-36x36.png");
+}
+
+.badges .gifter {
+  background-image: url("https://manz.dev/assets/badges/gifter-36x36.png");
+}
+
+.badges .bits {
+  background-image: url("https://manz.dev/assets/badges/bits-36x36.png");
+}
+
+.badges .founder {
+  background-image: url("https://manz.dev/assets/badges/founder-36x36.png");
+}
+
+.badges .train {
+  background-image: url("https://manz.dev/assets/badges/train-36x36.png");
+}
+
+.badges .partner {
+  background-image: url("https://manz.dev/assets/badges/partner-36x36.png");
+}
+
+.badges .raider {
+  background-image: url("https://manz.dev/assets/badges/raid-36x36.png");
+}
+
+.badges .no-audio {
+  background-image: url("https://manz.dev/assets/badges/no-audio-36x36.png");
+}
+
+.badges .no-video {
+  background-image: url("https://manz.dev/assets/badges/no-video-36x36.png");
+}
+
+.badges .vip {
+  background-image: url("https://manz.dev/assets/badges/vip-36x36.png");
+}
+
+.badges .sub[tier="2"] {
+  filter: drop-shadow(0 0 4px lightgrey);
+}
+
+.badges .sub[tier="3"] {
+  filter: drop-shadow(0 0 4px gold);
+}
+
+.badges .sub[months] {
+  background-image: var(--image);
+}
