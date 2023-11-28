@@ -1,10 +1,10 @@
-const AVOCADO_AVATAR = "https://manz.dev/assets/avatars/default/d.png";
+import { DEFAULT_AVATAR } from "../modules/config.js";
 
 const checkAvatar = (user) => {
   const hasDefaultPicture = user.picture.includes("user-default-pictures-uv");
 
   if (hasDefaultPicture) {
-    user.picture = AVOCADO_AVATAR;
+    user.picture = DEFAULT_AVATAR;
   }
 
   return user;

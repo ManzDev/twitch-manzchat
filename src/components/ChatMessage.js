@@ -1,5 +1,5 @@
 import styles from "./ChatMessage.css?inline";
-import { DEFAULT_AVATAR, TIME_TO_HIDE } from "../modules/config.js";
+import { LOADING_AVATAR, TIME_TO_HIDE } from "../modules/config.js";
 import { getUserInfo } from "../services/getUserInfo.js";
 import "./UserBadges.js";
 import "./UserMessage.js";
@@ -8,7 +8,7 @@ class ChatMessage extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.avatar = DEFAULT_AVATAR;
+    this.avatar = LOADING_AVATAR;
   }
 
   connectedCallback() {
@@ -66,7 +66,7 @@ class ChatMessage extends HTMLElement {
 
     this.badges.setOptions(options);
     options.color && this.setColor(options.color);
-    options.first && this.classList.add("first");
+    options.firstMessage && this.classList.add("first");
     options.reply && this.setReply(options.reply);
   }
 

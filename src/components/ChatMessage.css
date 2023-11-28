@@ -15,18 +15,16 @@
 .container {
   display: grid;
   grid-template-columns: calc(var(--avatar-size) * 1.5) 1fr;
-  background:
-    linear-gradient(to right, transparent, #0008),
-    linear-gradient(to right, #000d, #000f, #000d 98%, var(--nick-color, #000) 98% 100%);
+  background: linear-gradient(to right, #000d, #000f, #000d 98%, var(--nick-color, #000) 98% 100%);
   margin: 8px 0;
   padding: 10px 5px;
-  box-shadow: var(--shadow, 0 0 1px 1px #000);
+  box-shadow: var(--shadow, 0 0 0 3px #000e);
   transition:
     opacity 0.2s,
     transform 0.2s;
   will-change: opacity, transform;
   opacity: 100%;
-  transform: translateX(0);
+  transform: translateX(-2px);
   position: relative;
 }
 
@@ -44,20 +42,23 @@
 }
 
 .user-info {
+  --avatar-size: 52px;
+
   display: grid;
   justify-content: center;
-  height: 100%;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
   box-sizing: border-box;
+  background: var(--nick-color) linear-gradient(150deg, transparent, #0008);
+  border-radius: 50%;
+  transform: translateX(-30px) rotate(-6deg);
 }
 
 .user-info img {
-  --avatar-size: 52px;
-
   width: var(--avatar-size);
   height: var(--avatar-size);
-  border: 2px solid #fff;
   border-radius: 50%;
-  transform: translateX(-30px) rotate(-6deg);
+  border: 3px solid var(--border-color, #fff);
 }
 
 .user-message {

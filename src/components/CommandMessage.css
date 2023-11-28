@@ -16,7 +16,7 @@
   /* background:
     linear-gradient(to right, transparent, #0008),
     linear-gradient(to right, #000d, #000f, #000d 98%, var(--nick-color, #000) 98% 100%); */
-  background: #000b;
+  background: #000e;
   margin: 8px 0;
   box-shadow: var(--shadow, 0 0 1px 1px #000);
   transition:
